@@ -18,7 +18,7 @@ class Student extends Human{
 		this.id=id;
 	}
 	public void work(){
-		System.out.println(this.address+"在の学籍番号"+this.id+"番の学生"+this.name+"は勉強します。");
+		System.out.println(this.address+"在住の学籍番号"+this.id+"番の学生"+this.name+"は勉強します。");
 	}
 }
 
