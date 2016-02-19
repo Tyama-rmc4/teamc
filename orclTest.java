@@ -13,23 +13,23 @@ public class orclTest{
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			//Oracle‚ÉÚ‘±‚·‚é
+			//Oracleã«æ¥ç¶šã™ã‚‹
 			Connection cn=
 				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl",
 				"scott","tiger");
-			System.out.println("Ú‘±Š®—¹");
+			System.out.println("æ¥ç¶šå®Œäº†");
 			
-			//select•¶
+			//selectæ–‡
 //			String sql="DROP TABLE threadstest";
 //			String sql="CREATE TABLE threadstest(thread_id	NUMBER(3),thread_name	VARCHAR2(20),create_day	VARCHAR2(20))";
-//			String sql="INSERT INTO threadstest VALUES(16, 'ƒXƒŒƒbƒh', '2016/02/12')";
+//			String sql="INSERT INTO threadstest VALUES(16, 'ã‚¹ãƒ¬ãƒƒãƒ‰', '2016/02/12')";
 			String sql="SELECT * FROM threadstest";
-			//StatementƒCƒ“ƒ^[ƒtƒFƒCƒX‚ğÀ‘•‚·‚éƒNƒ‰ƒX‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é
+			//Statementã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’å®Ÿè£…ã™ã‚‹ã‚¯ãƒ©ã‚¹ã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹
 			Statement st=cn.createStatement();
 
-			//select•¶‚ğÀs‚µ
-			//ResultSetƒCƒ“ƒ^[ƒtƒFƒCƒX‚ğÀ‘•‚µ‚½ƒNƒ‰ƒX‚Ì
-			//ƒCƒ“ƒXƒ^ƒ“ƒX‚ª•Ô‚é
+			//selectæ–‡ã‚’å®Ÿè¡Œã—
+			//ResultSetã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã‚’å®Ÿè£…ã—ãŸã‚¯ãƒ©ã‚¹ã®
+			//ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒè¿”ã‚‹
 			ResultSet rs=st.executeQuery(sql);
 			
 			rs.next();
@@ -39,16 +39,16 @@ public class orclTest{
 			
 			System.out.println(id+ "\t" +name+ "\t" +day);
 			
-			//Oracle‚©‚çØ’f‚·‚é
+			//Oracleã‹ã‚‰åˆ‡æ–­ã™ã‚‹
 			cn.close();
 			
-			System.out.println("Ø’fŠ®—¹");
+			System.out.println("åˆ‡æ–­å®Œäº†");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-			System.out.println("ƒNƒ‰ƒX‚ª‚È‚¢‚İ‚½‚¢B");
+			System.out.println("ã‚¯ãƒ©ã‚¹ãŒãªã„ã¿ãŸã„ã€‚");
 		}catch(SQLException e){
 			e.printStackTrace();
-			System.out.println("SQLŠÖ˜A‚Ì—áŠO‚İ‚½‚¢B");
+			System.out.println("SQLé–¢é€£ã®ä¾‹å¤–ã¿ãŸã„ã€‚");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
