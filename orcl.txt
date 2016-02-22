@@ -1,0 +1,9 @@
+net start oracleserviceorcl
+net stop .....
+
+lsnrctl start
+
+sqlplus
+
+tomcat-lib‚Éclasspath
+C:\jar\ojdbc14.jar
