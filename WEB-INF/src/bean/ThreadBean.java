@@ -1,6 +1,6 @@
-package beam;
+package bean;
 
-public class ThreadBean implements Beam {
+public class ThreadBean implements Bean {
 	private int thread_id;
 	private String thread_name;
 	private String create_day;
